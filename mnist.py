@@ -99,7 +99,7 @@ optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)
 # mean=0.5 std=1.0으로 Normalize한다
 mnist_transform = transforms.Compose([
     transforms.ToTensor(), 
-    transforms.Normalize((0.5,), (1.0,))
+    # transforms.Normalize((0.5,), (1.0,))
 ])
 
 download_path = './data'
