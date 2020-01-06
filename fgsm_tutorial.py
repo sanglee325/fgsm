@@ -111,7 +111,7 @@ device = torch.device('cuda' if is_cuda else 'cpu')
 
 mnist_transform = transforms.Compose([
     transforms.ToTensor(), 
-    transforms.Normalize((0.5,), (1.0,))
+    # transforms.Normalize((0.5,), (1.0,))
 ])
 
 download_path = './data'
