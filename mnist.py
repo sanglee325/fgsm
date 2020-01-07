@@ -84,7 +84,7 @@ is_cuda = torch.cuda.is_available()
 device = torch.device('cuda' if is_cuda else 'cpu')
 
 train_batch_size=64
-test_batch_size=1000
+test_batch_size=1
 epochs=30
 lr = 0.01
 momentum = 0.5
