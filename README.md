@@ -69,9 +69,19 @@ FGSM is one of the most popular Adversarial attack. It is powerful and intuitive
   ```
 ## Result
 
-### Accuracy & Epsilon  
+### Accuracy & Epsilon
 
   ![graph](images/accuracy.png)
+- ```
+  FGSM defense:  
+  Epsilon: 0	Test Accuracy = 9509 / 10000 = 0.9509  
+  Epsilon: 0.05	Test Accuracy = 9303 / 10000 = 0.9303  
+  Epsilon: 0.1	Test Accuracy = 9339 / 10000 = 0.9339  
+  Epsilon: 0.15	Test Accuracy = 9442 / 10000 = 0.9442  
+  Epsilon: 0.2	Test Accuracy = 9541 / 10000 = 0.9541  
+  Epsilon: 0.25	Test Accuracy = 9546 / 10000 = 0.9546  
+  Epsilon: 0.3	Test Accuracy = 9556 / 10000 = 0.9556  
+  ```
 
 ### Sample Attacked MNIST examples  
 
