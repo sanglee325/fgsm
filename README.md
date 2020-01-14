@@ -27,13 +27,9 @@ FGSM is one of the most popular Adversarial attack. It is powerful and intuitive
 ### FGSM Attack
 - ```python
   def fgsm_attack(image, epsilon, data_grad):
-    # gradient의 부호를 반환한다
-    sign_data_grad = data_grad.sign()
-    # input image의 pixel의 값을 조정하여 perturbed image를 만들어낸다
-    perturbed_image = image + epsilon*sign_data_grad
-    # 0, 1 범위를 유지하기 위해 벗어나는 값들을 조정한다
-    perturbed_image = torch.clamp(perturbed_image, 0, 1)
-    #Return perturbed image
+    adversary = FGSM(model, loss_fn=nn.NLLLoss(reduction='sum'), 
+                    eps=epsilon, clip_min=0., clip_max=1., targeted=False)
+    perturbed_image = adversary.perturb(image, label)
     return perturbed_image
   ```
 
